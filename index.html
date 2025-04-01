@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohamed LakhLoufi - Full Stack Developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,8 +13,8 @@
         <div class="container">
             <div class="profile-container">
                 <img src="profile.jpg" alt="Mohamed LakhLoufi" class="profile-img">
-                <h1>Mohamed LakhLoufi</h1>
-                <h2>Full Stack Web Developer</h2>
+                <h1 class="animate__animated animate__fadeInDown">Mohamed LakhLoufi</h1>
+                <h2 class="animate__animated animate__fadeInDown animate__delay-1s">Full Stack & Mobile App Developer</h2>
             </div>
             <nav>
                 <ul>
@@ -35,19 +36,19 @@
     <main>
         <section id="about" class="section">
             <div class="container">
-                <h2 class="section-title">About Me</h2>
+                <h2 class="section-title animate__animated animate__fadeIn">About Me</h2>
                 <div class="about-content">
-                    <div class="about-text">
-                        <p>Born on 06/28/2000, I am a holder of a specialized technician diploma in digital development. I am currently looking for a job position. I perfectly master web development languages and I am versatile in IT.</p>
+                    <div class="about-text animate__animated animate__fadeInLeft">
+                        <p>Born on 06/28/2000, I hold a specialized technician diploma in digital development. Currently seeking a position where I can apply my expertise in web and mobile development. I have strong proficiency in web development languages and versatile IT skills.</p>
                         <div class="personal-info">
-                            <div>
+                            <div class="animate__animated animate__fadeIn animate__delay-1s">
                                 <h3>Education</h3>
                                 <ul>
-                                    <li><strong>Diploma in digital development</strong> - Web Full Stack, 2023 ISTAG BAB TIZIMI MEKNES</li>
-                                    <li><strong>Baccalaureate in physical science</strong> - 2021 LYCÉE 11 JANVIER AIN TAOUJDAT</li>
+                                    <li><strong>Diploma in Digital Development</strong> - Web Full Stack, 2023 ISTAG BAB TIZIMI MEKNES</li>
+                                    <li><strong>Baccalaureate in Physical Science</strong> - 2021 LYCÉE 11 JANVIER AIN TAOUJDAT</li>
                                 </ul>
                             </div>
-                            <div>
+                            <div class="animate__animated animate__fadeIn animate__delay-1s">
                                 <h3>Languages</h3>
                                 <ul>
                                     <li>Arabic: Native</li>
@@ -63,17 +64,17 @@
 
         <section id="skills" class="section">
             <div class="container">
-                <h2 class="section-title">Skills</h2>
+                <h2 class="section-title animate__animated animate__fadeIn">Skills</h2>
                 <div class="skills-container">
-                    <div class="skills-column">
+                    <div class="skills-column animate__animated animate__fadeIn">
                         <h3>Technical Skills</h3>
                         <div class="skills-grid" id="technical-skills"></div>
                     </div>
-                    <div class="skills-column">
+                    <div class="skills-column animate__animated animate__fadeIn animate__delay-1s">
                         <h3>Soft Skills</h3>
                         <div class="skills-grid" id="soft-skills"></div>
                     </div>
-                    <div class="skills-column">
+                    <div class="skills-column animate__animated animate__fadeIn animate__delay-2s">
                         <h3>Other Activities</h3>
                         <div class="skills-grid" id="other-skills"></div>
                     </div>
@@ -83,37 +84,46 @@
 
         <section id="experience" class="section">
             <div class="container">
-                <h2 class="section-title">Professional Experience</h2>
+                <h2 class="section-title animate__animated animate__fadeIn">Professional Experience</h2>
                 <div class="timeline" id="experience-timeline"></div>
             </div>
         </section>
 
         <section id="projects" class="section">
             <div class="container">
-                <h2 class="section-title">Projects</h2>
+                <h2 class="section-title animate__animated animate__fadeIn">Projects</h2>
                 <div class="projects-grid" id="projects-grid"></div>
             </div>
         </section>
 
         <section id="contact" class="section">
             <div class="container">
-                <h2 class="section-title">Contact</h2>
+                <h2 class="section-title animate__animated animate__fadeIn">Contact</h2>
                 <div class="contact-container">
                     <div class="contact-info">
-                        <div class="contact-item">
+                        <div class="contact-item animate__animated">
                             <i class="fas fa-phone"></i>
-                            <p>+212 6 50 36 42 76</p>
+                            <div>
+                                <h3>Phone</h3>
+                                <p>+212 6 50 36 42 76</p>
+                            </div>
                         </div>
-                        <div class="contact-item">
+                        <div class="contact-item animate__animated">
                             <i class="fas fa-envelope"></i>
-                            <p>Mohamedkhloufii25@gmail.com</p>
+                            <div>
+                                <h3>Email</h3>
+                                <p>Mohamedkhloufii25@gmail.com</p>
+                            </div>
                         </div>
-                        <div class="contact-item">
+                        <div class="contact-item animate__animated">
                             <i class="fas fa-map-marker-alt"></i>
-                            <p>159 hay andalous, ain taoujdat, morocco</p>
+                            <div>
+                                <h3>Address</h3>
+                                <p>159 Hay Andalous, Ain Taoujdat, Morocco</p>
+                            </div>
                         </div>
                     </div>
-                    <form class="contact-form">
+                    <form class="contact-form animate__animated">
                         <div class="form-group">
                             <input type="text" placeholder="Your Name" required>
                         </div>
@@ -126,20 +136,23 @@
                         <div class="form-group">
                             <textarea placeholder="Your Message" required></textarea>
                         </div>
-                        <button type="submit">Send Message</button>
+                        <button type="submit" class="btn-pulse">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
                     </form>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="animate__animated animate__fadeIn">
         <div class="container">
             <p>&copy; 2024 Mohamed LakhLoufi. All rights reserved.</p>
             <div class="social-links">
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="animate__animated animate__bounceIn"><i class="fab fa-github"></i></a>
+                <a href="#" class="animate__animated animate__bounceIn animate__delay-1s"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="animate__animated animate__bounceIn animate__delay-2s"><i class="fab fa-twitter"></i></a>
             </div>
         </div>
     </footer>

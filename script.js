@@ -16,52 +16,38 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Active nav link based on scroll position
-    const sections = document.querySelectorAll('section');
-    const navItems = document.querySelectorAll('nav a');
-    
-    function setActiveNavItem() {
-        let index = sections.length;
-        
-        while(--index && window.scrollY + 100 < sections[index].offsetTop) {}
-        
-        navItems.forEach(item => item.classList.remove('active'));
-        navItems[index]?.classList.add('active');
-    }
-    
-    window.addEventListener('scroll', setActiveNavItem);
-    setActiveNavItem();
-    
     // Skills Data
     const technicalSkills = [
         { name: 'HTML5', icon: 'fab fa-html5' },
         { name: 'CSS3', icon: 'fab fa-css3-alt' },
         { name: 'JavaScript', icon: 'fab fa-js' },
         { name: 'React', icon: 'fab fa-react' },
+        { name: 'React Native', icon: 'fab fa-react' },
         { name: 'Node.js', icon: 'fab fa-node-js' },
-        { name: 'PHP', icon: 'fab fa-php' },
+        { name: 'Laravel', icon: 'fab fa-laravel' },
         { name: 'Python', icon: 'fab fa-python' },
-        { name: 'Git', icon: 'fab fa-git-alt' },
+        { name: 'MongoDB', icon: 'fas fa-database' },
         { name: 'MySQL', icon: 'fas fa-database' },
-        { name: 'MongoDB', icon: 'fas fa-server' },
-        { name: 'Bootstrap', icon: 'fab fa-bootstrap' },
-        { name: 'Sass', icon: 'fab fa-sass' }
+        { name: 'Git', icon: 'fab fa-git-alt' },
+        { name: 'UML', icon: 'fas fa-project-diagram' },
+        { name: 'WordPress', icon: 'fab fa-wordpress' },
+        { name: 'Figma', icon: 'fab fa-figma' }
     ];
     
     const softSkills = [
-        { name: 'Problem Solving', icon: 'fas fa-lightbulb' },
         { name: 'Teamwork', icon: 'fas fa-users' },
-        { name: 'Communication', icon: 'fas fa-comments' },
-        { name: 'Creativity', icon: 'fas fa-paint-brush' },
+        { name: 'Analytical Thinking', icon: 'fas fa-brain' },
+        { name: 'Creativity', icon: 'fas fa-lightbulb' },
         { name: 'Time Management', icon: 'fas fa-clock' },
-        { name: 'Adaptability', icon: 'fas fa-random' }
+        { name: 'Communication', icon: 'fas fa-comments' },
+        { name: 'Working Under Pressure', icon: 'fas fa-fire' },
+        { name: 'Agile Methodology', icon: 'fas fa-tasks' }
     ];
     
     const otherSkills = [
-        { name: 'UI/UX Design', icon: 'fas fa-pencil-ruler' },
-        { name: 'Project Management', icon: 'fas fa-tasks' },
-        { name: 'Agile Methodology', icon: 'fas fa-project-diagram' },
-        { name: 'Technical Writing', icon: 'fas fa-pen-fancy' }
+        { name: 'Photography', icon: 'fas fa-camera' },
+        { name: 'Video Editing', icon: 'fas fa-video' },
+        { name: 'Script Writing', icon: 'fas fa-pen-fancy' }
     ];
     
     // Populate Skills
@@ -86,22 +72,28 @@ document.addEventListener('DOMContentLoaded', function() {
     // Experience Data
     const experiences = [
         {
-            title: 'Full Stack Developer Intern',
-            company: 'Tech Solutions Inc.',
-            date: 'June 2022 - August 2022',
-            description: 'Developed and maintained web applications using React and Node.js. Collaborated with team members to implement new features and fix bugs.'
-        },
-        {
             title: 'Web Developer',
-            company: 'Freelance',
-            date: 'January 2021 - Present',
-            description: 'Built responsive websites for small businesses. Worked closely with clients to understand requirements and deliver customized solutions.'
+            company: 'Meknes Municipality',
+            date: 'Jan 2023 - Mar 2023',
+            description: 'Developed web applications for municipal services and internal systems.'
         },
         {
-            title: 'IT Support Specialist',
-            company: 'Local School District',
-            date: 'September 2020 - December 2020',
-            description: 'Provided technical support to staff and students. Maintained computer systems and troubleshoot hardware/software issues.'
+            title: 'System Developer',
+            company: 'Tamsouri Delivery',
+            date: 'Nov 2023 - Jan 2024',
+            description: 'Managed and updated delivery system, developed web and mobile applications for logistics management.'
+        },
+        {
+            title: 'Full Stack Developer',
+            company: 'Web Dono',
+            date: 'Apr 2023 - Jun 2023',
+            description: 'Developed web and mobile applications for various clients, implemented RESTful APIs.'
+        },
+        {
+            title: 'Full Stack Developer',
+            company: 'Hitman Digital',
+            date: 'Mar 2024 - Jul 2024',
+            description: 'Created web and mobile applications, maintained existing systems, and developed REST APIs.'
         }
     ];
     
@@ -123,22 +115,36 @@ document.addEventListener('DOMContentLoaded', function() {
     // Projects Data
     const projects = [
         {
-            title: 'E-commerce Platform',
-            description: 'A full-featured online store with product management, cart functionality, and payment processing.',
-            technologies: ['React', 'Node.js', 'MongoDB'],
-            image: 'https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80'
+            title: 'Pyespuus E-commerce',
+            description: 'Multi-vendor e-commerce platform with vendor management system.',
+            technologies: ['HTML', 'CSS', 'JavaScript', 'React', 'Laravel', 'MySQL'],
+            image: 'https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
+            demo: '#',
+            code: '#'
         },
         {
-            title: 'Portfolio Website',
-            description: 'A responsive personal portfolio website showcasing projects and skills.',
-            technologies: ['HTML5', 'CSS3', 'JavaScript'],
-            image: 'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80'
+            title: 'Pyespuus Mobile App',
+            description: 'Mobile application version of the e-commerce platform with native features.',
+            technologies: ['React Native', 'Firebase'],
+            image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
+            demo: '#',
+            code: '#'
         },
         {
-            title: 'Task Management App',
-            description: 'A productivity application for organizing tasks with drag-and-drop functionality.',
-            technologies: ['React', 'Firebase'],
-            image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80'
+            title: 'Tafilalt Rental System',
+            description: 'Car, apartment and hotel rental platform with booking management.',
+            technologies: ['React', 'Python', 'MongoDB'],
+            image: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
+            demo: '#',
+            code: '#'
+        },
+        {
+            title: 'Jawhara Food Restaurant System',
+            description: 'Restaurant management system for orders and billing.',
+            technologies: ['React', 'Laravel', 'MySQL'],
+            image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
+            demo: '#',
+            code: '#'
         }
     ];
     
@@ -153,16 +159,60 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="project-info">
                 <h3 class="project-title">${project.title}</h3>
                 <p class="project-description">${project.description}</p>
+                <div class="tech-tags">
+                    ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                </div>
                 <div class="project-links">
-                    <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                    <a href="#"><i class="fab fa-github"></i> Code</a>
+                    <a href="${project.demo}" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+                    <a href="${project.code}" target="_blank"><i class="fab fa-github"></i> Code</a>
                 </div>
             </div>
         `;
         projectsGrid.appendChild(projectElement);
     });
     
-    // Contact Form
+    // Animation on scroll
+    const animateOnScroll = () => {
+        const animateElements = document.querySelectorAll('.skill-item, .timeline-item, .project-card, .contact-item, .contact-form, .social-links a');
+        const windowHeight = window.innerHeight;
+        const triggerBottom = windowHeight * 0.85;
+
+        animateElements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            
+            if (elementTop < triggerBottom) {
+                element.classList.add('animate');
+                
+                // Special animation for contact items
+                if (element.classList.contains('contact-item')) {
+                    const index = Array.from(document.querySelectorAll('.contact-item')).indexOf(element);
+                    element.style.transitionDelay = `${index * 0.2}s`;
+                }
+            }
+        });
+    };
+
+    // Initialize animations
+    window.addEventListener('scroll', animateOnScroll);
+    animateOnScroll(); // Run once on load
+    
+    // Animate contact form after a delay
+    setTimeout(() => {
+        const contactForm = document.querySelector('.contact-form');
+        if (contactForm) contactForm.classList.add('animate');
+    }, 500);
+    
+    // Animate social links with delay
+    setTimeout(() => {
+        const socialLinks = document.querySelectorAll('.social-links a');
+        socialLinks.forEach((link, index) => {
+            setTimeout(() => {
+                link.classList.add('animate');
+            }, index * 300);
+        });
+    }, 1000);
+    
+    // Form submission
     const contactForm = document.querySelector('.contact-form');
     
     if (contactForm) {
@@ -185,31 +235,4 @@ document.addEventListener('DOMContentLoaded', function() {
             this.reset();
         });
     }
-    
-    // Intersection Observer for scroll animations
-    const animateOnScroll = () => {
-        const elements = document.querySelectorAll('.skill-item, .timeline-item, .project-card, .contact-item');
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        });
-        
-        elements.forEach(element => {
-            observer.observe(element);
-        });
-    };
-    
-    // Initialize animations
-    animateOnScroll();
-    
-    // Re-run animations when resizing to handle responsive layout changes
-    window.addEventListener('resize', animateOnScroll);
 });
